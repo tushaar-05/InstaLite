@@ -5,7 +5,12 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node src/index.js",
+    "seed": "prisma db seed",
+    "test": "node test_suite.js"
+  },
+  "prisma": {
+    "seed": "node ./prisma/seed.js"
   },
   "keywords": [],
   "author": "",
@@ -17,6 +22,7 @@
     "@prisma/adapter-pg": "^7.10.1",
     "@prisma/client": "^7.10.1",
     "dotenv": "^18.0.9",
+    "express": "^5.3.0",
     "pg": "^8.23.1"
   }
 }
